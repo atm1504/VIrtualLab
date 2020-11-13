@@ -543,9 +543,31 @@ hr {
 #connect a.googleplus:hover {
 	background-position: 0 -197px;
 }
-.center {
+/* .center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-  }
+  } */
+#editor { 
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.code {
+	color: #316e66;
+	display: inline-block;
+	background-color: #fff;
+	font: 16px/35px "Times New Roman", Times, serif;
+	height: 35px;
+	width: 138px;
+	border: 1px solid #5a4535;
+	text-align: center;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	/* position: absolute; */
+	/* bottom: 30px; */
+}
