@@ -4,7 +4,10 @@ from django.conf.urls.static import static
 
 from django.conf import settings
 
+from .views import home_page
+
 urlpatterns = [
+    path('',home_page, name="home"),
     path('admin/', admin.site.urls),
 ]
 
