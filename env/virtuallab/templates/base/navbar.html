@@ -5,16 +5,32 @@
     </div>
     <div id="navigation">
         <ul>
+            {% if home %}
             <li class="selected">
+                {% else %}
+            <li>
+                {% endif %}
                 <a href="index.html">Labs</a>
             </li>
+            {% if simple %}
+            <li class="selected">
+                {% else %}
             <li>
+                {% endif %}
                 <a href="simple.html">Simple Pendulum</a>
             </li>
+            {% if double %}
+            <li class="selected">
+                {% else %}
             <li>
+                {% endif %}
                 <a href="double.html">Double Pendulum</a>
             </li>
+            {% if about %}
+            <li class="selected">
+                {% else %}
             <li>
+                {% endif %}
                 <a href="about.html">About</a>
             </li>
 
