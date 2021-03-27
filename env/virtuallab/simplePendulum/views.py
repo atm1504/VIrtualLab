@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+def view_simple_pendulum(req):
+    template = "simplePendulum/view.html"
+
+    return render(req,template, {})

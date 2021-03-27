@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'doublePendulum.apps.DoublependulumConfig',
+    'simplePendulum',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 
 from django.conf import settings
@@ -8,7 +8,10 @@ from .views import home_page
 
 urlpatterns = [
     path('',home_page, name="home"),
+    path('simple/',include(("simplePendulum.urls", "app_name"), namespace="simple_pendulum")),
+    path('double/',include(("doublePendulum.urls", "app_name"), namespace="double_pendulum")),
     path('admin/', admin.site.urls),
+
 ]
 
 if settings.DEBUG:
