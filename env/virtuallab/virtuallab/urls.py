@@ -4,12 +4,15 @@ from django.conf.urls.static import static
 
 from django.conf import settings
 
-from .views import home_page
+from .views import home_page, about_page
 
 urlpatterns = [
-    path('',home_page, name="home"),
-    path('simple/',include(("simplePendulum.urls", "app_name"), namespace="simple_pendulum")),
-    path('double/',include(("doublePendulum.urls", "app_name"), namespace="double_pendulum")),
+    path('', home_page, name="home"),
+    path('about/', about_page, name="about"),
+    path('simple/', include(("simplePendulum.urls",
+         "app_name"), namespace="simple")),
+    path('double/', include(("doublePendulum.urls",
+         "app_name"), namespace="double")),
     path('admin/', admin.site.urls),
 
 ]

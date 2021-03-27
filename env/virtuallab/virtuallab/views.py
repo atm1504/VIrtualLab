@@ -12,4 +12,15 @@ def home_page(req):
         "double": False,
         "about": False
     }
-    return render(req, "home.html", context)
+    return render(req, template, context)
+
+
+def about_page(req):
+    template = "about.html"
+    context = {
+        "home": False,
+        "simple": False,
+        "double": False,
+        "about": True
+    }
+    return render(req, template, context)

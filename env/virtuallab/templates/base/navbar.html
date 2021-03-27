@@ -1,7 +1,12 @@
 {% load static %}
+{% url 'home' as home_url %}
+{% url 'simple' as simple_url %}
+{% url 'double' as double_url %}
+{% url 'about' as about_url %}
+
 <div id="header">
     <div id="logo">
-        <a href="index.html"><img src="{% static 'img/iitp_logo.png' %}" alt="LOGO" height="112" width="118"></a>
+        <a href="{{ home_url}}"><img src="{% static 'img/iitp_logo.png' %}" alt="LOGO" height="112" width="118"></a>
     </div>
     <div id="navigation">
         <ul>
@@ -10,28 +15,28 @@
                 {% else %}
             <li>
                 {% endif %}
-                <a href="index.html">Labs</a>
+                <a href="{{home_url}}">Labs</a>
             </li>
             {% if simple %}
             <li class="selected">
                 {% else %}
             <li>
                 {% endif %}
-                <a href="simple.html">Simple Pendulum</a>
+                <a href='{% url "simple:simple_pendulum_view" %}'>Simple Pendulum</a>
             </li>
             {% if double %}
             <li class="selected">
                 {% else %}
             <li>
                 {% endif %}
-                <a href="double.html">Double Pendulum</a>
+                <a href='{% url "double:double_pendulum_view" %}'>Double Pendulum</a>
             </li>
             {% if about %}
             <li class="selected">
                 {% else %}
             <li>
                 {% endif %}
-                <a href="about.html">About</a>
+                <a href="{{ about_url }}">About</a>
             </li>
 
         </ul>
