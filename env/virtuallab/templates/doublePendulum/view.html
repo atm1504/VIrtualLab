@@ -8,33 +8,40 @@
 
 {% block content %}
 <div id="contents">
-    <div class="box">
+    <div id="adbox">
+        <video width="853" height="423" margin: "0 auto" controls>
+            <source src=" {% static '/video/Double pendulum vid.mp4' %}" type="video/mp4">
+        </video>
+        <h1>DOUBLE PENDULUM</h1>
+        <p>
+            In physics and mathematics, in the area of dynamical systems, a double pendulum is a pendulum with another
+            pendulum attached to its end, and is a simple physical system that exhibits rich dynamic behavior with a
+            strong sensitivity to initial conditions. The motion of a double pendulum is governed by a set of coupled
+            ordinary differential equations and is chaotic.
+        </p>
+        <a href="./double_pend_code.html" tabindex="_"><span class="code"> Code</span></a>
         <div>
-            <div class="body">
-                <h1>LABS</h1>
-                <ul id="rooms">
-                    <li>
-                        <a href="simple.html"><img src="{% static 'img/simple_pend_img.png'%}" alt="Img"
-                                style="height: 400px; width:400px"></a>
-                        <h2><a href="simple.html">Simple Pendulum</a></h2>
-                        <p>
-                            A simple pendulum is one which can be considered to be a point mass suspended from a string
-                            or rod of negligible mass. It is a resonant system with a single resonant frequency.
-                        </p>
+            <div class="box"></div>
+            <div><span class="center">
+                    <h1> DERIVATIONS </h1>
+                </span></div>
+            <div id="workings">
+                <hr>
+                <div class="infos">
+                    <img src="{% static 'img/eqns1_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
 
-                    </li>
-                    <li>
-                        <a href="double.html"><img src="{% static 'img/double_pend_img.png' %}" alt="Img"
-                                style="height: 400px; width:400px"></a>
-                        <h2><a href="double.html">Double Pendulum</a></h2>
-                        <p>
-                            In physics and mathematics, in the area of dynamical systems, a double pendulum is a
-                            pendulum with another pendulum attached to its end, and is a simple physical system that
-                            exhibits rich dynamic behavior with a strong sensitivity to initial conditions.
-                        </p>
-                        <span class="rate">Click Here</span>
-                    </li>
-                </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="infos">
+                <img src="{% static 'img/eqns2_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
+
+            </div>
+
+            <hr>
+            <div class="infos">
+                <img src="{% static 'img/eqns3_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
+
             </div>
         </div>
     </div>
