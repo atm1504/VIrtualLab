@@ -8,6 +8,8 @@ from .views import home_page, about_page
 
 urlpatterns = [
     path('', home_page, name="home"),
+    path('matplot/', include(("matplot.urls",
+         "app_name"), namespace="matplot")),
     path('about/', about_page, name="about"),
     path('simple/', include(("simplePendulum.urls",
          "app_name"), namespace="simple")),
