@@ -102,7 +102,7 @@ def animate(i):
     return line, time_text, energy_text
 
 
-def run_double_pendulum_animation(mass1=1, mass2=1, length1=1, length2=1):
+def run_double_pendulum_animation(mass1=1, mass2=1, length1=1, length2=1, xlim_neg=-2, xlim_pos=2, ylim_neg=-2, ylim_pos=2):
     global pendulum, dt, line, time_text, energy_text
 
     # ------------------------------------------------------------
@@ -115,7 +115,7 @@ def run_double_pendulum_animation(mass1=1, mass2=1, length1=1, length2=1):
     # set up figure and animation
     fig = plt.figure()
     ax = fig.add_subplot(111, aspect='equal', autoscale_on=False,
-                         xlim=(-2, 2), ylim=(-2, 2))
+                         xlim=(xlim_neg, xlim_pos), ylim=(ylim_neg, ylim_pos))
     ax.grid()
 
     line, = ax.plot([], [], 'o-', lw=2)
