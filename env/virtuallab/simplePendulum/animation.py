@@ -5,7 +5,7 @@ import math
 import matplotlib.animation as animation
 
 
-class simplePendulum:
+class SimplePendulum:
     def __init__(self, length=1, mass=0.1, damp=0.05, left=0, right=5):
         # Pass the input parameters
         self.b = damp  # 0.05
@@ -59,5 +59,5 @@ class simplePendulum:
 # plt.legend(loc='best')
 # plt.show()
 # animation
-simple = simplePendulum(1, 0.1, 0.05, 0, 5)
+simple = SimplePendulum(1, 0.1, 0.05, 0, 5)
 simple.show()
