@@ -12,7 +12,7 @@ class SimplePendulum:
         self.g = 9.81
         self.l = length  # 1
         self.m = mass  # 0.1
-        self.theta_0 = [left, right]  # Initial angle
+        self.theta_0 = [left, right]  # Initial angle [0,5]
         self.t = np.linspace(0, 20, 250)
         # solving ODE by function call
         self.theta = odeint(self.mode1, self.theta_0, self.t,
@@ -59,5 +59,7 @@ class SimplePendulum:
 # plt.legend(loc='best')
 # plt.show()
 # animation
-simple = SimplePendulum(1, 0.1, 0.05, 0, 5)
-simple.show()
+
+def run_simple_pendulum_animation():
+    simple = SimplePendulum(1, 0.1, 0.05, 0, 5)
+    simple.show()

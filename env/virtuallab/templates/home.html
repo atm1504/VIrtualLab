@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% url 'double' as double_url %}
 <title>Home Page</title>
 
 {% block base_head %}
@@ -23,10 +22,11 @@
                             A simple pendulum is one which can be considered to be a point mass suspended from a string
                             or rod of negligible mass. It is a resonant system with a single resonant frequency.
                         </p>
-
+                        <a href='{% url "simple:simple_pendulum_simulate" %}'><span class="rate">Simulate</span></a>
                     </li>
                     <li>
-                        <a href='{% url "double:double_pendulum_view" %}'><img src="{% static 'img/double_pend_img.png' %}" alt="Img"
+                        <a href='{% url "double:double_pendulum_view" %}'><img
+                                src="{% static 'img/double_pend_img.png' %}" alt="Img"
                                 style="height: 400px; width:400px"></a>
                         <h2><a href='{% url "double:double_pendulum_view" %}'>Double Pendulum</a></h2>
                         <p>
@@ -34,7 +34,7 @@
                             pendulum with another pendulum attached to its end, and is a simple physical system that
                             exhibits rich dynamic behavior with a strong sensitivity to initial conditions.
                         </p>
-                        <span class="rate">Click Here</span>
+                        <a href='{% url "double:double_pendulum_simulate" %}'><span class="rate">Simulate</span></a>
                     </li>
                 </ul>
             </div>
