@@ -14,25 +14,27 @@
                 <h1>LABS</h1>
                 <ul id="rooms">
                     <li>
-                        <a href="simple.html"><img src="{% static 'img/simple_pend_img.png'%}" alt="Img"
+                        <a href='{% url "simple:simple_pendulum_view" %}'><img
+                                src="{% static 'img/simple_pend_img.png'%}" alt="Img"
                                 style="height: 400px; width:400px"></a>
-                        <h2><a href="simple.html">Simple Pendulum</a></h2>
+                        <h2><a href='{% url "simple:simple_pendulum_view" %}'>Simple Pendulum</a></h2>
                         <p>
                             A simple pendulum is one which can be considered to be a point mass suspended from a string
                             or rod of negligible mass. It is a resonant system with a single resonant frequency.
                         </p>
-
+                        <a href='{% url "simple:simple_pendulum_simulate" %}'><span class="rate">Simulate</span></a>
                     </li>
                     <li>
-                        <a href="double.html"><img src="{% static 'img/double_pend_img.png' %}" alt="Img"
+                        <a href='{% url "double:double_pendulum_view" %}'><img
+                                src="{% static 'img/double_pend_img.png' %}" alt="Img"
                                 style="height: 400px; width:400px"></a>
-                        <h2><a href="double.html">Double Pendulum</a></h2>
+                        <h2><a href='{% url "double:double_pendulum_view" %}'>Double Pendulum</a></h2>
                         <p>
                             In physics and mathematics, in the area of dynamical systems, a double pendulum is a
                             pendulum with another pendulum attached to its end, and is a simple physical system that
                             exhibits rich dynamic behavior with a strong sensitivity to initial conditions.
                         </p>
-                        <span class="rate">Click Here</span>
+                        <a href='{% url "double:double_pendulum_simulate" %}'><span class="rate">Simulate</span></a>
                     </li>
                 </ul>
             </div>
