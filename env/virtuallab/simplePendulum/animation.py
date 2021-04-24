@@ -60,6 +60,6 @@ class SimplePendulum:
 # plt.show()
 # animation
 
-def run_simple_pendulum_animation():
-    simple = SimplePendulum(1, 0.1, 0.05, 0, 5)
+def run_simple_pendulum_animation(length=1, mass=0.1, damp=0.05, left=0, right=5):
+    simple = SimplePendulum(length, mass, damp, left, right)
     simple.show()
