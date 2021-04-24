@@ -134,4 +134,4 @@ def run_double_pendulum_animation(mass1=1, mass2=1, length1=1, length2=1, xlim_n
     plt.show()
 
 
-# run_double_pendulum_animation(length1=3)
+# run_double_pendulum_animation(length1=1)
