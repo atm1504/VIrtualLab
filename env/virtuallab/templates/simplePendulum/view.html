@@ -14,8 +14,9 @@
         </video>
         <h1>SIMPLE PENDULUM</h1>
         <p>
-            A simple pendulum is one which can be considered to be a point mass suspended from a string or rod of
-            negligible mass. It is a resonant system with a single resonant frequency.
+            A simple pendulum consists of a ball (point-mass) m hanging from a (massless) string of length L and fixed
+            at a pivot point P. When displaced to an initial angle and released, the pendulum will swing back and forth
+            with periodic motion.
         </p>
         <a href="{% url 'simple:simple_pendulum_code' %}" tabindex="_"><span class="code"> Code</span></a>
         <a href="{% url 'simple:simple_pendulum_simulate' %}" tabindex="_"><span class="code"> Simulate</span></a>
@@ -38,7 +39,16 @@
             <div>
                 <hr>
                 <div class="infos">
-                    <img src="{% static 'img/simple.jpeg'%}" alt="Img" class="center" height="60%" width="80%">
+                    <p>By applying Newton's second law for rotational systems,</p>
+                    <p>\(τ = Iα\)</p>
+                    <p>Now, \(τ = −mgsinθL\)</p>
+                    <p>\(I = mL^2\) (point mass)</p>
+                    <p>\(α = d2θ/dt^2\)</p>
+                    <p>τ has negative sign because mgsinθ acts against the motion.</p>
+                    <p>Thus equating we get :</p>
+                    <p>\( − mgsinθL = mL^2 * d2θ/dt^2\)</p>
+                    <p>\(⇒ − gsinθ/L =d2θ/dt^2\)</p>
+                    <p>\(d2θ/dt^2 + gsinθ/L = 0\)</p>
                 </div>
             </div>
         </div>
