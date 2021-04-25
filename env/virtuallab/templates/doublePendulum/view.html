@@ -40,10 +40,102 @@
             <div id="workings">
                 <hr>
                 <div class="infos">
-                    <img src="{% static 'img/eqns1_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
+                    <p>We assume that the rods are massless. Their lengths are l1 and l2. The point masses (they are
+                        represented by the balls of finite radius) are m1 and m2. All pivots are assumed to be
+                        frictionless.</p>
+
+                    <p>We introduce the xy-coordinate system, the origin O of which coincides with suspension point of
+                        the upper pendulum. The coordinates of the pendulums are defined by the following relationships:
+                    </p>
+
+                    <p>\(x1 = l1sinα1\)</p>
+
+                    <p>\(x2 = l1sinα1 + l2sinα2 \)</p>
+                    <p>\(y1 = −l1cosα1\)</p>
+                    <p>\(y2 = − l1cosα1 − l2cosα2\)</p>
+
+                    <p>Kinetic energy of the pendulums :</p>
+
+                    <p>\(T = {m1v1^2}/2 + {m2v2^2}/2 = m1[{˙x1^2+˙y1^2}]/2 + m2[{˙x2^2+˙y2^2}]/2\)</p>
+
+                    <p>Potential energy of the pendulums :</p>
+                    <p>\(V = m1gy1 + m2gy2\)</p>
+
+                    <p>Then the Lagrangian can be written as</p>
+                    <p>\(L = T – V =T1+T2 − {V1+V2} = m1{˙x1^2+˙y1^2}/2 + m2{˙x2^2+˙y2^2}/2 − m1gy1 − m2gy2\)</p>
+
+                    <p>Take into account that</p>
+                    <p>\(˙x1=l1cosα1⋅˙α1, ˙x2=l1cosα1⋅˙α1+l2cosα2⋅˙α2,\)</p>
+                    <p>\(˙y1=l1sinα1⋅˙α1, ˙y2=l1sinα1⋅˙α1+l2sinα2⋅˙α2\)</p>
+
+                    <p>Consequently, </p>
+                    <p>\(T1 = {m1 (˙x1^2+˙y1^2)}/2 = {m1(l1^2˙α1^2cos^2α1+l1^2˙α1^2sin^2α1)}/2 = {m1l1^2˙α1^2}/2\)</p>
+
+                    <p>\(T2= m2 (˙x2^2+˙y2^2)/2 ={m2 [(l1˙α1cosα1 + l2˙α2cosα2)^2
+                        + (l1˙α1sinα1+l2˙α2sinα2)^2]}/2 \)</p>
+                    <p> \(
+                        = {m2 [l1^2˙α1^2cos^2α1+ l2^2˙α2^2cos^2α2 + 2l1l2˙α1˙α2cosα1cosα2 + l1^2˙α1^2sin^2α1 +
+                        l2^2˙α2^2sin^2α2+ 2l1l2˙α1˙α2sinα1sinα2]}/2 \)
+                    </p>
+                    <p>\( = {m2 [l1^2˙α1^2 + l2^2˙α2^2+ 2l1l2˙α1˙α2cos(α1−α2)]}/2\)</p>
+
+
+                    <p>\(V1 = m1gy1 = −m1gl1cosα1 \)</p>
+                    <p>\(V2 = m2gy2 = −m2g(l1cosα1 + l2cosα2)\)</p>
+
+                    <p>As a result, the Lagrangian of the system takes the following form:</p>
+
+                    <p>\(L = T – V = T1 + T2 − (V1+V2) = (m12 + m22)l12˙α12 + m22 l22˙α22
+                        +m2l1l2˙α1˙α2cos(α1−α2) + (m1+m2)gl1cosα1 + m2gl2cosα2
+                        \)</p>
+
+                    <p>
+                        Now we can write the Lagrange equations
+                    </p>
+
+                    <p>\(d/dt {∂L/∂˙αi} − ∂L/∂αi = 0, i = 1,2.
+                        \)</p>
+
+                    <p>The partial derivatives in these equations are expressed by the following formulas:</p>
+
+                    <p>\(∂L/∂˙α1 = (m1+m2)l1^2˙α1 + m2l1l2˙α2cos(α1−α2)\)</p>
+
+                    <p>\(∂L/∂α1 = −m2l1l2˙α1˙α2sin(α1−α2) − (m1+m2)gl1sinα1\)</p>
+
+                    <p>\(∂L/∂˙α2 = m2l2^2˙α2 + m2l1l2˙α2cos(α1−α2)\)</p>
+
+                    <p>\(∂L/∂α2 = m2l1l2˙α1˙α2sin(α1−α2) − m2gl2sinα2\)</p>
+
+                    <p>Hence, the first Lagrange equation can be written as</p>
+
+                    <p>\(d/dt [(m1+m2) l1^2˙α1 + m2l1l2˙α2cos(α1−α2)] + m2l1l2˙α1˙α2sin(α1−α2)
+                        +(m1+m2)gl1sinα1=0\)</p>
+
+                    <p>\(⇒(m1+m2) l12¨α1 + m2l1l2¨α2cos(α1−α2) + m2l1l2˙α2^2sin(α1−α2)
+                        +(m1+m2)gl1sinα1=0
+                        \)</p>
+
+                    <p>Cancelling \(l1≠0\), we obtain:</p>
+
+                    <p>\((m1+m2)l1¨α1 + m2l2¨α2cos(α1−α2) + m2l2˙α2^2sin(α1−α2) + (m1+m2)gsinα1=0\)</p>
+
+                    <p>Similarly, we derive the second differential equation:</p>
+
+                    <p>\(d/dt [m2 l2^2˙α2 + m2l1l2˙α1cos(α1−α2)] − m2l1l2˙α1˙α2sin(α1−α2) + m2gl2sinα2 = 0\)</p>
+
+                    <p>\(⇒m2 l2^2¨α2 + m2l1l2¨α1cos(α1−α2) − m2l1l2˙α12sin(α1−α2) + m2gl2sinα2 = 0\)</p>
+
+                    <p>After cancelling \(m2l2\) ≠ 0 the equation takes the form </p>
+
+                    <p>\(l2¨α2 + l1¨α1cos(α1−α2) − l1˙ α1^2sin(α1−α2) + gsinα2=0\)</p>
+
+                    <br>
+                    <p>Thus, the nonlinear system of two Lagrange differential equations can be written as:</p>
+                    <p>\((m1+m2)l1¨α1 + m2l2¨α2cos(α1−α2) + m2l2˙α2^2sin(α1−α2) + (m1+m2)gsinα1 = 0\)</p>
+                    <p>\(l2¨α2 + l1¨α1cos(α1−α2) − l1˙α1^2sin(α1−α2) + gsinα2 = 0\)</p>
                 </div>
             </div>
-            <hr>
+            <!-- <hr>
             <div class="infos">
                 <img src="{% static 'img/eqns2_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
 
@@ -53,7 +145,7 @@
             <div class="infos">
                 <img src="{% static 'img/eqns3_DP.jpeg' %}" alt="Img" class="center" height="60%" width="80%">
 
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
